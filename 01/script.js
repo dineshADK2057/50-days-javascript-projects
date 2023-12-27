@@ -1,14 +1,18 @@
-const imgContainers = document.querySelectorAll('.inactive')
+const imgContainers = document.querySelectorAll('.imgbox');
 
 imgContainers.forEach(imgContainer => {
+
     imgContainer.addEventListener('click', () => {
-        removeActiveClass();
-        imgContainer.classList.add('active')
+        
+        imgContainer.classList.toggle('active');
+
+        imgContainers.forEach(clickedImgBox => 
+            {
+                if (clickedImgBox !== imgContainer) {
+                    clickedImgBox.classList.remove('active');
+                }
+            }
+        );           
+        
     })
 });
-
-function removeActiveClass(){
-    imgContainers.forEach(imgContainer => {
-        imgContainer.classList.remove('active')
-    });
-}
