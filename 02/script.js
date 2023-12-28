@@ -14,6 +14,7 @@ next.addEventListener('click', () => {
     if (currentActive > circles.length) {
         currentActive = circles.length;
     }
+    
     updateCircle();
 })
 
@@ -35,12 +36,10 @@ function updateCircle() {
 
         if (index < currentActive) {
             circle.classList.add('active');
-
         }
         else {
             circle.classList.remove('active');
         }
-
     })
 
     const actives = document.querySelectorAll('.active')
@@ -57,15 +56,11 @@ function updateCircle() {
     }
 
     // changing next into submi
-
     if (actives.length == circles.length) {
         next.innerHTML = "Submit"
     }
     else{
         next.innerHTML = "Next"
-
     }
-
-
 }
 
