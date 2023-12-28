@@ -14,9 +14,6 @@ next.addEventListener('click', () => {
     if (currentActive > circles.length) {
         currentActive = circles.length;
     }
-
-
-
     updateCircle();
 })
 
@@ -29,10 +26,6 @@ prev.addEventListener('click', () => {
     }
 
     updateCircle();
-
-
-
-
 });
 
 function updateCircle() {
@@ -49,7 +42,6 @@ function updateCircle() {
         }
 
     })
-
 
     const actives = document.querySelectorAll('.active')
 
